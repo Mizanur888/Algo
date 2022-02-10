@@ -34,7 +34,8 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: '**/$(BuildConfiguration)/**/?(*.exe|*.dll|*.pdb)'
+    Contents: '**/$(BuildConfiguration)/**/bin\**'
     TargetFolder: 'C:\TestDev\Algo'
     CleanTargetFolder: true
+    Overwrite: true
     preserveTimestamp: true
