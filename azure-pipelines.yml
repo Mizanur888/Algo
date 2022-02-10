@@ -31,3 +31,10 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'Build.SourcesDirectory'
+    Contents: '**/$(BuildConfiguration)/**/?(*.exe|*.dll|*.pdb)'
+    TargetFolder: 'C:\TestDev\Algo'
+    CleanTargetFolder: true
+    preserveTimestamp: true
