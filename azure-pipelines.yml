@@ -34,7 +34,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: '**/$(BuildConfiguration)/**/bin\**'
+    Contents: '**/bin\**'
     TargetFolder: 'C:\TestDev\Algo'
     CleanTargetFolder: true
     Overwrite: true
